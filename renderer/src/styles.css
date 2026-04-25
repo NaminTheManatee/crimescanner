@@ -211,7 +211,7 @@ small { display: block; color: var(--muted); margin-top: 4px; font-size: 12px; }
 .events-list::-webkit-scrollbar-track, .rankings-grid::-webkit-scrollbar-track, .settings-view::-webkit-scrollbar-track { background: rgba(0,0,0,.12); }
 
 /* User-requested refinements: responsive top controls, scrollable content, compact rows */
-.main-panel { min-height: 0; height: 100vh; }
+.main-panel { position: relative; min-height: 0; height: 100vh; }
 .topbar {
   grid-template-columns: minmax(190px, 1fr) minmax(240px, 440px) auto;
   min-width: 0;
@@ -399,3 +399,21 @@ small { display: block; color: var(--muted); margin-top: 4px; font-size: 12px; }
 .stat-icon .asset-icon { width: 26px; height: 26px; }
 .side-nav .asset-icon { width: 18px; height: 18px; }
 .stat-icon img, .side-nav img { display: none; }
+
+
+.app-version-badge {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  z-index: 20;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(9, 9, 13, .72);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}

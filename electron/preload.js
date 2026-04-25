@@ -11,6 +11,7 @@ contextBridge.exposeInMainWorld('crimeScanner', {
   getAssetPath: (name) => ipcRenderer.invoke('app:getAssetPath', name),
   checkForUpdates: () => ipcRenderer.invoke('app:checkForUpdates'),
   installUpdateNow: () => ipcRenderer.invoke('app:installUpdateNow'),
+  getVersion: () => ipcRenderer.invoke('app:getVersion'),
   onReady: (callback) => ipcRenderer.on('backend-ready', (_event, payload) => callback(payload)),
   onLog: (callback) => ipcRenderer.on('backend-log', (_event, payload) => callback(payload)),
   onUpdateStatus: (callback) => ipcRenderer.on('update:status', (_event, payload) => callback(payload))

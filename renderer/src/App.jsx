@@ -378,6 +378,7 @@ function App() {
   const [brandSrc, setBrandSrc] = useState(brandLogo);
   const [assetPaths, setAssetPaths] = useState({});
   const [updateStatus, setUpdateStatus] = useState('');
+  const [appVersion, setAppVersion] = useState('');
   const knownEventKeys = useRef(new Set());
   const initialized = useRef(false);
   const lastParseKeys = useRef(new Set());
@@ -478,7 +479,20 @@ function App() {
     });
     window.crimeScanner.onReady(ingest);
     window.crimeScanner.onLog(text => setStatus(String(text || '').trim()));
-    window.crimeScanner.onUpdateStatus?.(payload => setUpdateStatus(payload?.status || ''));
+    window.crimeScanner.onUpdateStatus?.(payload => {
+      const statusText = payload?.status || '';
+      setUpdateStatus(statusText);
+      if (statusText === 'checking') setStatus('Checking for updates…');
+      if (statusText === 'available') setStatus('Update available. Downloading…');
+      if (statusText === 'downloading') {
+        const pct = Math.round(payload?.progress?.percent || 0);
+        setStatus(`Downloading update${pct ? ` ${pct}%` : '…'}`);
+      }
+      if (statusText === 'downloaded') setStatus('Update ready. Restart to install.');
+      if (statusText === 'installing') setStatus('Restarting to install update…');
+      if (statusText === 'error') setStatus(payload?.message || 'Update check failed.');
+    });
+    window.crimeScanner.getVersion?.().then(version => setAppVersion(version ? `v${version}` : '')).catch(() => setAppVersion(''));
     window.crimeScanner.setExitOnClose?.(exitOnClose).catch(() => {});
     request('getState')
       .then(() => runParse(true))
@@ -543,6 +557,7 @@ function App() {
       <main className="main-panel">
         <TopBar activeTab={activeTab} search={search} setSearch={setSearch} connection="SQLite: Connected" />
         {page}
+        {appVersion ? <div className="app-version-badge" title={updateStatus ? `Update status: ${updateStatus}` : 'Current app version'}>{appVersion}</div> : null}
       </main>
     </div>
   );

@@ -190,14 +190,38 @@ function setupAutoUpdater() {
   autoUpdater.on('update-available', info => safeSend('update:status', { status: 'available', info }));
   autoUpdater.on('update-not-available', info => safeSend('update:status', { status: 'none', info }));
   autoUpdater.on('download-progress', progress => safeSend('update:status', { status: 'downloading', progress }));
-  autoUpdater.on('update-downloaded', info => {
+  autoUpdater.on('update-downloaded', async info => {
     safeSend('update:status', { status: 'downloaded', info });
+
+    const message = 'A new CrimeScanner update has been downloaded. CrimeScanner will restart to install the update.';
+
     if (Notification.isSupported()) {
       new Notification({
         title: 'CrimeScanner update ready',
         body: 'Restart CrimeScanner to install the update.',
         icon: assetPath('icon.png')
       }).show();
+    }
+
+    try {
+      const result = await dialog.showMessageBox(isWindowAlive() ? mainWindow : undefined, {
+        type: 'info',
+        title: 'CrimeScanner update ready',
+        message,
+        detail: 'Choose Restart now to close CrimeScanner and apply the update. Choose Later to install it when you exit the app.',
+        buttons: ['Restart now', 'Later'],
+        defaultId: 0,
+        cancelId: 1,
+        noLink: true
+      });
+
+      if (result.response === 0) {
+        safeSend('update:status', { status: 'installing', info });
+        isQuitting = true;
+        autoUpdater.quitAndInstall(false, true);
+      }
+    } catch (error) {
+      safeSend('update:status', { status: 'downloaded', info, message: error?.message || String(error) });
     }
   });
   autoUpdater.on('error', error => safeSend('update:status', { status: 'error', message: error?.message || String(error) }));
@@ -256,6 +280,7 @@ ipcMain.handle('app:notify', (_event, payload = {}) => {
   }).show();
   return true;
 });
+ipcMain.handle('app:getVersion', () => app.getVersion());
 ipcMain.handle('app:getAutoLaunch', () => app.getLoginItemSettings().openAtLogin);
 ipcMain.handle('app:setAutoLaunch', (_event, enabled) => {
   app.setLoginItemSettings({ openAtLogin: Boolean(enabled) });

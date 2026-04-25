@@ -435,9 +435,9 @@
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_opcode_metadata.py',
    'PYMODULE'),
-  ('stringprep',
+  ('_py_abc',
    'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\stringprep.py',
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_py_abc.py',
    'PYMODULE'),
   ('_py_warnings',
    'C:\\Users\\Ghislain '
@@ -451,13 +451,13 @@
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\fnmatch.py',
    'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\stringprep.py',
+   'PYMODULE'),
   ('codeop',
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\codeop.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_py_abc.py',
    'PYMODULE'),
   ('crimescanner_core',
    'E:\\Torrents\\CrimeScanner\\backend\\crimescanner_core.py',
@@ -647,7 +647,99 @@
  [('base_library.zip',
    'E:\\Torrents\\CrimeScanner\\build\\crimescanner_backend\\base_library.zip',
    'DATA')],
- [('encodings.zlib_codec',
+ [('abc',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\abc.py',
+   'PYMODULE'),
+  ('types',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\types.py',
+   'PYMODULE'),
+  ('sre_constants',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\sre_constants.py',
+   'PYMODULE'),
+  ('weakref',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\weakref.py',
+   'PYMODULE'),
+  ('_weakrefset',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_weakrefset.py',
+   'PYMODULE'),
+  ('linecache',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\linecache.py',
+   'PYMODULE'),
+  ('ntpath',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\ntpath.py',
+   'PYMODULE'),
+  ('stat',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\stat.py',
+   'PYMODULE'),
+  ('posixpath',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\posixpath.py',
+   'PYMODULE'),
+  ('reprlib',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\reprlib.py',
+   'PYMODULE'),
+  ('copyreg',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\copyreg.py',
+   'PYMODULE'),
+  ('sre_parse',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\sre_parse.py',
+   'PYMODULE'),
+  ('io',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\io.py',
+   'PYMODULE'),
+  ('warnings',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\warnings.py',
+   'PYMODULE'),
+  ('_collections_abc',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_collections_abc.py',
+   'PYMODULE'),
+  ('genericpath',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\genericpath.py',
+   'PYMODULE'),
+  ('sre_compile',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\sre_compile.py',
+   'PYMODULE'),
+  ('functools',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\functools.py',
+   'PYMODULE'),
+  ('heapq',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\heapq.py',
+   'PYMODULE'),
+  ('collections',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\collections\\__init__.py',
+   'PYMODULE'),
+  ('operator',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\operator.py',
+   'PYMODULE'),
+  ('keyword',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\keyword.py',
+   'PYMODULE'),
+  ('locale',
+   'C:\\Users\\Ghislain '
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\locale.py',
+   'PYMODULE'),
+  ('encodings.zlib_codec',
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\encodings\\zlib_codec.py',
    'PYMODULE'),
@@ -1139,25 +1231,9 @@
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\encodings\\__init__.py',
    'PYMODULE'),
-  ('locale',
+  ('traceback',
    'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\locale.py',
-   'PYMODULE'),
-  ('_collections_abc',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_collections_abc.py',
-   'PYMODULE'),
-  ('io',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\io.py',
-   'PYMODULE'),
-  ('copyreg',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\copyreg.py',
-   'PYMODULE'),
-  ('reprlib',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\reprlib.py',
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\traceback.py',
    'PYMODULE'),
   ('re._parser',
    'C:\\Users\\Ghislain '
@@ -1179,89 +1255,13 @@
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\re\\__init__.py',
    'PYMODULE'),
-  ('codecs',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\codecs.py',
-   'PYMODULE'),
-  ('warnings',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\warnings.py',
-   'PYMODULE'),
-  ('sre_parse',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\sre_parse.py',
-   'PYMODULE'),
-  ('linecache',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\linecache.py',
-   'PYMODULE'),
-  ('functools',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\functools.py',
-   'PYMODULE'),
-  ('types',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\types.py',
-   'PYMODULE'),
-  ('sre_compile',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\sre_compile.py',
-   'PYMODULE'),
-  ('weakref',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\weakref.py',
-   'PYMODULE'),
-  ('_weakrefset',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\_weakrefset.py',
-   'PYMODULE'),
-  ('traceback',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\traceback.py',
-   'PYMODULE'),
-  ('keyword',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\keyword.py',
-   'PYMODULE'),
-  ('genericpath',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\genericpath.py',
-   'PYMODULE'),
-  ('operator',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\operator.py',
-   'PYMODULE'),
   ('enum',
    'C:\\Users\\Ghislain '
    'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\enum.py',
    'PYMODULE'),
-  ('stat',
+  ('codecs',
    'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\stat.py',
-   'PYMODULE'),
-  ('heapq',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\heapq.py',
-   'PYMODULE'),
-  ('sre_constants',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\sre_constants.py',
-   'PYMODULE'),
-  ('abc',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\abc.py',
-   'PYMODULE'),
-  ('ntpath',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\ntpath.py',
-   'PYMODULE'),
-  ('posixpath',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\posixpath.py',
-   'PYMODULE'),
-  ('collections',
-   'C:\\Users\\Ghislain '
-   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\collections\\__init__.py',
+   'Brajus\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\codecs.py',
    'PYMODULE'),
   ('os',
    'C:\\Users\\Ghislain '
