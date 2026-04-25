@@ -1,0 +1,98 @@
+{
+  "name": "crimescanner-electron",
+  "version": "1.0.0",
+  "description": "CrimeScanner desktop dashboard and Star Citizen crime log monitor",
+  "main": "electron/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "vite --config renderer/vite.config.js",
+    "build:renderer": "vite build --config renderer/vite.config.js",
+    "start": "npm run build:renderer && electron .",
+    "electron": "electron .",
+    "build:backend": "python -m PyInstaller --noconfirm --clean --onefile --name crimescanner_backend --icon assets/icon.ico backend/crimescanner_api.py",
+    "pack": "npm run build:renderer && electron-builder --dir",
+    "dist": "npm run build:installer",
+    "build:installer": "npm run build:backend && npm run build:renderer && electron-builder --win nsis",
+    "installer": "electron-builder --win nsis",
+    "publish": "npm run build:installer -- --publish always",
+    "publish:github": "npm run build:installer -- --publish always"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.crimescanner.app",
+    "productName": "CrimeScanner",
+    "files": [
+      "electron/**/*",
+      "renderer/dist/**/*",
+      "package.json",
+      "assets/icon.ico",
+      "assets/icon.png",
+      "assets/brand.jpg",
+      "assets/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/crimescanner_backend.exe",
+        "to": "backend/crimescanner_backend.exe",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "assets",
+        "to": "assets",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "CrimeScanner Setup ${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "CrimeScanner",
+      "uninstallDisplayName": "CrimeScanner",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": true,
+      "artifactName": "CrimeScanner Setup ${version}.${ext}"
+    },
+    "directories": {
+      "output": "dist-electron"
+    },
+    "asar": true,
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "NaminTheManatee",
+        "repo": "crimescanner",
+        "releaseType": "release"
+      }
+    ]
+  },
+  "author": "CrimeScanner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NaminTheManatee/crimescanner.git"
+  },
+  "homepage": "https://github.com/NaminTheManatee/crimescanner#readme"
+}

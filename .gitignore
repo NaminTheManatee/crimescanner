@@ -1,0 +1,43 @@
+# Node / Electron
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+renderer/dist/
+dist/
+dist-electron/
+out/
+release/
+build/*.exe
+build/*.msi
+*.blockmap
+latest.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.spec
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime app data / caches
+crime_logger_game_log_settings.json
+crime_scanner_rsi_cache.json
+crime_scanner_stats_cache.json
+crime_scanner_history.sqlite3
+crime_scanner_image_cache/
+*.sqlite3
+*.db
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
