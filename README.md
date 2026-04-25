@@ -2,7 +2,7 @@
 
 CrimeScanner is a Windows desktop application for monitoring Star Citizen `Game.log` crime events. It parses local game logs, enriches player information from the Roberts Space Industries (RSI) website, stores history locally, and presents the results in a dark Electron dashboard.
 
-The app is built as an Electron + React frontend with a bundled Python backend. Users install and run it like a normal Windows application; Python and Node.js are only required for development/building, not for end users.
+The app is built as an Electron + React frontend with a bundled Python backend.
 
 \---
 
@@ -206,7 +206,7 @@ Game.log
 Example:
 
 ```text
-StarCitizen\\LIVE
+StarCitizen\LIVE
 ```
 
 After the folder is selected, the app parses the log and begins monitoring.
