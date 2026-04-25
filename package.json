@@ -1,6 +1,6 @@
 {
   "name": "crimescanner-electron",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CrimeScanner desktop dashboard and Star Citizen crime log monitor",
   "main": "electron/main.js",
   "private": true,
